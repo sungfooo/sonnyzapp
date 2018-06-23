@@ -4,11 +4,10 @@
         <meta charset="utf-8">
         <title>Sonny Z app</title>
         <link rel="stylesheet" href="bootstrap.min.css">
-        <script src="src/lib/js/bootstrap.min.js"></script>
+        <script src="bootstrap.min.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <!-- As a link -->
         <nav class="navbar navbar-light bg-primary"">
             <div class="container">
                 <span class="navbar-text white-important">
@@ -23,7 +22,34 @@
           <p class="lead">This beautiful page is here to help spread awareness to these beautiful creatures! Please enjoy the content!</p>
           <hr class="my-4">
           <p>If you would like to donate to help run this page click on the button below.</p>
-          <a class="btn btn-primary btn-lg" href="https://www.paypal.com" role="button">Donate</a>
+          <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+              Donate
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Leave this page?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Are you sure you want to leave this page?
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Go Back</button>
+                    <a class="btn btn-primary btn-lg" href="https://www.paypal.com" role="button">
+                        <button type="button" class="btn btn-primary">Proceed to website</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--<a class="btn btn-primary btn-lg" href="https://www.paypal.com" role="button">Donate</a>-->
         </div>
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -51,55 +77,37 @@
             <span class="sr-only">Next</span>
           </a>
          </div>
-    <!---    <div id="video-background" class="video-container">
-            <div class="video-background">
-                <div class="video-foreground">
-                    <div id="player"></div>
-                </div>
-            </div>
-        </div>
-        <script src="app/app.js"></script>
-        <script>
-            // 2. This code loads the IFrame Player API code asynchronously.
-            var tag = document.createElement('script');
-            tag.src = "https://www.youtube.com/iframe_api";
-            var firstScriptTag = document.getElementsByTagName('script')[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-            // 3. This function creates an <iframe> (and YouTube player)
-            //    after the API code downloads.
-            var player;
-            function onYouTubeIframeAPIReady() {
-              player = new YT.Player('player', {
-                videoId: 'UP6HjHygUWw',
-                playerVars: {
-                    autoplay: 1,
-                    loop: 1,
-                    controls: 0,
-                    showinfo: 0,
-                    modestbranding:1
-                },
-                events: {
-                  'onReady': onPlayerReady,
-                  'onStateChange': onPlayerStateChange
-                }
-              });
-            }
-            // 4. The API will call this function when the video player is ready.
-            function onPlayerReady(event) {
-                 event.target.setVolume(0);
-                 event.target.playVideo();
-            }
-            // 5. The API calls this function when the player's state changes.
-            //    The function indicates that when playing a video (state=1),
-            //    the player should play for six seconds and then stop.
-            var done = false;
-            function onPlayerStateChange(event) {
-              if (event.data == YT.PlayerState.PLAYING && !done) {
-            //      setTimeout(stopVideo, 6000);
-                        done = true;
-              }
-                 event.target.setVolume(0);
-            }
-        </script> -->
+     <div>    
+      <table class="table table-bordered">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Rank</th>
+            <th scope="col">Sonny</th>
+            <th scope="col">Expert 2</th>
+            <th scope="col">Expert 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Orangutan</td>
+            <td>Gorilla</td>
+            <td>Gorilla</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Gibbon</td>
+            <td>Orangutan</td>
+            <td>Gibbon</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Gorilla</td>
+            <td>Gibbon</td>
+            <td>Orangutan</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     </body>
 </html>
